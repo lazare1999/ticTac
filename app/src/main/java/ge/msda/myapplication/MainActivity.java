@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -78,6 +79,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button7.setOnClickListener(this);
         button8.setOnClickListener(this);
         button9.setOnClickListener(this);
+
+        button1.setBackgroundColor(Color.CYAN);
+        button2.setBackgroundColor(Color.CYAN);
+        button3.setBackgroundColor(Color.CYAN);
+        button4.setBackgroundColor(Color.CYAN);
+        button5.setBackgroundColor(Color.CYAN);
+        button6.setBackgroundColor(Color.CYAN);
+        button7.setBackgroundColor(Color.CYAN);
+        button8.setBackgroundColor(Color.CYAN);
+        button9.setBackgroundColor(Color.CYAN);
 
     }
 
@@ -176,10 +187,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String ans = "player1: " +player1 +" - "+ "player2: " + player2;
 
             notesTextView.setText(ans);
-
+            resetGame();
 
         }
 
+    }
+
+    private void resetGame() {
+        firstPlayer.clear();
+        secondPlayer.clear();
+
+        button1.setText("");
+        button1.setBackgroundColor(Color.CYAN);
+        button1.setEnabled(true);
+
+        button2.setText("");
+        button2.setBackgroundColor(Color.CYAN);
+        button2.setEnabled(true);
+
+        button3.setText("");
+        button3.setBackgroundColor(Color.CYAN);
+        button3.setEnabled(true);
+
+        button4.setText("");
+        button4.setBackgroundColor(Color.CYAN);
+        button4.setEnabled(true);
+
+        button5.setText("");
+        button5.setBackgroundColor(Color.CYAN);
+        button5.setEnabled(true);
+
+        button6.setText("");
+        button6.setBackgroundColor(Color.CYAN);
+        button6.setEnabled(true);
+
+        button7.setText("");
+        button7.setBackgroundColor(Color.CYAN);
+        button7.setEnabled(true);
+
+        button8.setText("");
+        button8.setBackgroundColor(Color.CYAN);
+        button8.setEnabled(true);
+
+        button9.setText("");
+        button9.setBackgroundColor(Color.CYAN);
+        button9.setEnabled(true);
     }
 
     private boolean isContainsSet(List<Integer> arr, int... params) {
